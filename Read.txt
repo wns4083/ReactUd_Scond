@@ -1,0 +1,9 @@
+컴포넌트&데이터 구조 생각해보기
+<App/> <     <DiaryEdit> , <DiaryList>
+React는 단방향으로 흐르기 때문에 동일 선상에 있는 DiaryObject들을 같이 변화시키기 위해서는 어떻게 해야 하나 (<App/>으로 컨트롤)
+
+<App/>에 [data, setData]  
+<DiaryEditor/> <<< [item1, item2....] 추가 >>  <App/>
+추가된 data를 DiaryList에 넘겨주기
+
+이렇게 하면 아래에서 위로 향하는 로직이 생성하게 됨(State 끌어올리기 )
